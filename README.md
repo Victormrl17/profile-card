@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Make It Real - Profile Card
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the Profile Card project of the Make It Real course.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View a centered profile card on the screen with a responsive design.
+- See a background with a gradient effect and decorative patterns at the top and bottom.
+- View profile details including name, location, age, and statistics (followers, likes, photos).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./screenshot.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## My process
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- React
 
-### `npm run eject`
+### What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project helped me reinforce my skills in responsive design and component structuring in React. It was particularly useful to work on centering content both vertically and horizontally, applying gradient backgrounds, and positioning decorative elements.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```css
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, hsl(185, 75%, 39%), hsl(185, 58%, 57%));
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```js
+const ProfileCard = () => {
+  return (
+    <div className="card-container">
+      <img
+        src="/assets/bg-pattern-top.svg"
+        alt="Pattern Top"
+        className="bg-pattern-top"
+      />
+      <img
+        src="/assets/bg-pattern-bottom.svg"
+        alt="Pattern Bottom"
+        className="bg-pattern-bottom"
+      />
+      <div className="card">{/* Card Content */}</div>
+    </div>
+  );
+};
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Continued development
 
-## Learn More
+In future projects, I’d like to further explore advanced CSS positioning techniques, as well as improving accessibility by focusing on semantic HTML and ARIA attributes. Additionally, experimenting with more complex animations and transitions would be beneficial.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Useful resources
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **CSS Tricks - Flexbox Guide**:
+  This guide was instrumental in ensuring the card is centered on the page using Flexbox properties. [Link to Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-### Code Splitting
+- **React Documentation**:
+  Always a valuable resource for refreshing React basics and improving component structuring. [Link to React Documentation](https://reactjs.org/docs/getting-started.html)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Author
 
-### Analyzing the Bundle Size
+- Victor Ramirez - [@Victormrl17](https://github.com/Victormrl17)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A special thanks to Make it Real, especially [@khriztianmoreno](https://github.com/khriztianmoreno) for the valuable feedback during daily meetings and demos, and to [@nayruthCalla](https://github.com/nayruthCalla) for the support and review.

@@ -1,0 +1,106 @@
+/* Fondo general de la página */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, hsl(185, 75%, 39%), hsl(185, 58%, 57%));
+  font-family: Arial, sans-serif;
+  background: url('/public/assets/bg-pattern-card.svg'); /* Asegúrate de tener esta imagen */
+  background-size: cover;
+}
+
+/* Contenedor principal de la tarjeta */
+.card-container {
+  position: relative;
+  width: 350px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1;
+}
+
+/* Imagen de fondo del patrón */
+.bg-pattern-top, .bg-pattern-bottom{
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.bg-pattern-top {
+  top: -50px;
+  left: -50px;
+}
+
+.bg-pattern-bottom {
+  bottom: -50px;
+  right: -50px;
+}
+
+/* Estilo de la tarjeta */
+.card {
+  position: relative;
+  padding: 60px 20px 30px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Imagen de perfil */
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -60px;
+  z-index: 2;
+}
+
+/* Nombre y ubicación */
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(229, 23%, 23%);
+  margin: 10px 0 5px;
+}
+
+.profile-location {
+  font-size: 0.9rem;
+  color: hsl(227, 10%, 46%);
+  margin-bottom: 20px;
+}
+
+/* Estadísticas */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid hsl(210, 31%, 80%);
+  padding-top: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 1.3rem;
+  color: hsl(229, 23%, 23%);
+  margin: 0;
+}
+
+.stat p {
+  font-size: 0.8rem;
+  color: hsl(227, 10%, 46%);
+  margin: 0;
+}
+.card-header {
+
+  background: url('/public/assets/bg-pattern-card.svg'); /* Asegúrate de tener esta imagen */
+  background-size: contain;
+  height: 100px;
+}
